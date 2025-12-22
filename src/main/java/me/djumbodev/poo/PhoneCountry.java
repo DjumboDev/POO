@@ -47,21 +47,17 @@ public enum PhoneCountry {
        return this.countryCode;
     }
 
-    public static Set<PhoneCountry> getAllByRegionCodes(int regionCode) {
+    public static Set<PhoneCountry> getAllByRegionCode(int regionCode) {
         final EnumSet<PhoneCountry> set = REGION_CODE_LOOKUP.get(regionCode);
         return set == null ? Set.of() : Set.copyOf(set);
     }
 
-    public static PhoneCountry getFirstByRegionCode(int regionCode) {
-        return getAllByRegionCodes(regionCode).iterator().next();
-    }
-
-    public static Set<PhoneCountry> getAllByCountryCodes(int countryCode) {
+    public static Set<PhoneCountry> getAllByCountryCode(int countryCode) {
         final EnumSet<PhoneCountry> set = COUNTRY_CODE_LOOKUP.get(countryCode);
         return set == null ? Set.of() : Set.copyOf(set);
     }
 
     public static PhoneCountry getFirstByCountryCode(int countryCode) {
-        return getAllByCountryCodes(countryCode).iterator().next();
+        return getAllByCountryCode(countryCode).iterator().next();
     }
 }
