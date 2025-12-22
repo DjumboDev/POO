@@ -1,5 +1,5 @@
-public enum PhoneNumberType{
+public enum PhoneType{
     MOBILE,
     WORK,
-    HOME,
+    HOME;
 }
