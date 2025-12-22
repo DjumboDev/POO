@@ -6,7 +6,7 @@ public class Numberphone {
 
     public Numberphone(int number, PhoneType type, int countryCode) {
         this.number = number; // numéro de téléphone
-        this.type = type ; // Mobile, Home, Work
+        this.type = type; // Mobile, Home, Work
         this.countryCode = countryCode; // + 33
     }
 
