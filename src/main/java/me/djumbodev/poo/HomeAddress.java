@@ -1,13 +1,13 @@
-package me.djumbodev.poo.Personnes;
+package me.djumbodev.poo;
 
-public class Adresse {
+public class HomeAddress {
     protected final String streetName;
     protected final String phoneNumber;
     protected final String email;
     protected final String city;
     protected final String country;
 
-    public Adresse(String streetName, String PhoneNumber, String email, String ville, String country){
+    public HomeAddress(String streetName, String PhoneNumber, String email, String ville, String country){
     IO.println("Adresse Personne");
 
     this.streetName = streetName;

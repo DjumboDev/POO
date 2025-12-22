@@ -1,6 +1,6 @@
-package me.djumbodev.poo.Personnes;
+package me.djumbodev.poo;
 
-public class Personne {
+public class Person {
     protected final String name;
     protected final int age;
     protected int birthDay;
@@ -9,7 +9,7 @@ public class Personne {
     protected final String gender;
     protected final String status;
 
-    public Personne(String name, int age, int birthDay, int birthYear, int id, String gender, String status){
+    public Person(String name, int age, int birthDay, int birthYear, int id, String gender, String status){
 
         if (birthDay > 31){
             throw new IllegalArgumentException("Vous ne pouvez pas etre au dessus de 31 jours dans un mois.");
