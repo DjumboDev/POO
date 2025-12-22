@@ -1,12 +1,12 @@
 public class Numberphone {
 
     protected final int number;
-    protected final String type;
+    protected final PhoneType type;
     protected final int countryCode;
 
-    public Numberphone(int number, String type, int countryCode) {
-        this.number = number; // numéro de téléphone 
-        this.type = type; // Mobile, Home, Work
+    public Numberphone(int number, PhoneType, int countryCode) {
+        this.number = number; // numéro de téléphone
+        this.type = PhoneType.HOME; // Mobile, Home, Work
         this.countryCode = countryCode; // + 33
     }
 
