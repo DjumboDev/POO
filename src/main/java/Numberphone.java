@@ -5,9 +5,9 @@ public class Numberphone {
     protected final int countryCode;
 
     public Numberphone(int number, String type, int countryCode) {
-        this.number = number;
-        this.type = type;
-        this.countryCode = countryCode;
+        this.number = number; // numéro de téléphone 
+        this.type = type; // Mobile, Home, Work
+        this.countryCode = countryCode; // + 33
     }
 
     public int getNumber(){
