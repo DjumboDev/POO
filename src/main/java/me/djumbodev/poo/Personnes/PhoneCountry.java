@@ -1,14 +1,17 @@
 package me.djumbodev.poo.Personnes;
 
 public enum PhoneCountry {
- // Region 1 North America
-    UNITED_STATES(1,1),
-    CANADA(1,1),
+   // Region 1 North America
+   UNITED_STATES(1,1),
+   CANADA(1,1),
 
-    // Region 2 Europe
-    FRANCE(3,33),
-    BELGIUM(3,33),
-   GREECE(3,30);
+   // Region 2 Europe
+   GREECE(3,30),
+   NETHERLANDS(3,31),
+   BELGIUM(3,32),
+   FRANCE(3,33),
+   SPAIN(3,34);
+
 
     private final int assignedRegion;
     private final int assignedCode;
