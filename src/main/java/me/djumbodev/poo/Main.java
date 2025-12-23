@@ -5,6 +5,7 @@ public class Main{
         String name = "";
         int age = 0;
         int birthDay = 0;
+        Month birthMonth = Month.valueOf("");
         int birthYear = 0;
         int id = 0;
         String gender = "";
@@ -28,6 +29,10 @@ public class Main{
 
         while (birthDay <= 0){
             birthDay = Integer.parseInt(IO.readln("Donnez votre jour de naissance : "));
+        }
+
+        while (birthMonth.isEmpty()){
+            birthMonth = Month.valueOf(IO.readln("Donnez votre mois de naissance : "));
         }
 
         while (birthYear <= 1950){
@@ -74,10 +79,11 @@ public class Main{
             countryCode = Integer.parseInt(IO.readln("Donnez votre country code"));
         }
 
-        Person personne = new Person(name, age, birthDay, birthYear, id, gender, status);
+        Person personne = new Person(name, age, birthDay, birthMonth, birthYear, id, gender, status);
         IO.println(personne.getName());
         IO.println(personne.getAge() + " ans.");
         IO.println(personne.getBirthDay() + " est votre jour de naissance.");
+        IO.println(personne.getBirthMonth() + " est votre mois de naissance.");
         IO.println(personne.getBirthYear() + " est votre année de naissance.");
         IO.println(personne.getId() + " est votre ID.");
         IO.println(personne.getGender() + " est votre sexe.");

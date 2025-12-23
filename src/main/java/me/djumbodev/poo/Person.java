@@ -3,16 +3,22 @@ package me.djumbodev.poo;
 public class Person {
     protected final String name;
     protected final int age;
-    protected int birthDay;
+    protected final int birthDay;
+    protected final Month birthMonth;
     protected final int birthYear;
     protected final int id;
     protected final String gender;
     protected final String status;
 
-    public Person(String name, int age, int birthDay, int birthYear, int id, String gender, String status){
+    public Person(String name, int age, int birthDay, Month birthMonth, int birthYear, int id, String gender, String status){
 
         if (birthDay > 31){
             throw new IllegalArgumentException("Vous ne pouvez pas etre au dessus de 31 jours dans un mois.");
+        }
+        if (birthMonth.equalsIgnoreCase(birthMonth)){
+            IO.println("");
+        } else {
+            throw new IllegalArgumentException("Vous ne pouvez que choisir la liste des mois disponible.");
         }
         if (birthYear < 1950){
             throw new IllegalArgumentException("Vous ne pouvez pas être née en 1950 convention non respecté.");
@@ -28,6 +34,7 @@ public class Person {
         this.age = age;
         this.name = name;
         this.birthDay = birthDay;
+        this.birthMonth = birthMonth;
         this.birthYear = birthYear;
         this.id = id;
         this.gender = gender;
@@ -45,6 +52,10 @@ public class Person {
 
     public int getBirthDay(){
         return this.birthDay;
+    }
+
+    public Month getBirthMonth(){
+        return this.birthMonth;
     }
 
     public int getBirthYear(){
