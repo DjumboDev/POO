@@ -9,8 +9,9 @@ public class Person {
     protected final int id;
     protected final String gender;
     protected final String status;
+    protected final DifferentNationality nationality;
 
-    public Person(String name, int age, int birthDay, Month birthMonth, int birthYear, int id, String gender, String status){
+    public Person(String name, int age, int birthDay, Month birthMonth, int birthYear, int id, String gender, String status, DifferentNationality nationality){
 
         if (birthDay > 31){
             throw new IllegalArgumentException("Vous ne pouvez pas etre au dessus de 31 jours dans un mois.");
@@ -39,6 +40,7 @@ public class Person {
         this.id = id;
         this.gender = gender;
         this.status = status;
+        this.nationality = nationality;
 
     }
 
@@ -72,6 +74,9 @@ public class Person {
 
     public String getStatus(){
         return this.status;
+    }
+    public DifferentNationality getNationality(){
+        return this.nationality;
     }
 
 }

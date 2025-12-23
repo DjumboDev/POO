@@ -10,6 +10,7 @@ public class Main{
         int id = 0;
         String gender = "";
         String status = "";
+        DifferentNationality nationality = DifferentNationality.valueOf("");
         String streetName = "";
         String email = "";
         String phoneNumber = "";
@@ -50,6 +51,9 @@ public class Main{
         while (status.isEmpty()){
             status = IO.readln("Donnez votre statut actuelle (étudiant, fonctionnaire) : ");
         }
+        while (nationality.isEmpty()){
+            nationality = DifferentNationality.valueOf(IO.readln("Donnez votre nationalité : "));
+        }
 
         while (streetName.isEmpty()){
             streetName = IO.readln("Donnez votre nom de rue : ");
@@ -79,7 +83,7 @@ public class Main{
             countryCode = Integer.parseInt(IO.readln("Donnez votre country code"));
         }
 
-        Person personne = new Person(name, age, birthDay, birthMonth, birthYear, id, gender, status);
+        Person personne = new Person(name, age, birthDay, birthMonth, birthYear, id, gender, status, nationality);
         IO.println(personne.getName());
         IO.println(personne.getAge() + " ans.");
         IO.println(personne.getBirthDay() + " est votre jour de naissance.");
@@ -88,6 +92,7 @@ public class Main{
         IO.println(personne.getId() + " est votre ID.");
         IO.println(personne.getGender() + " est votre sexe.");
         IO.println(personne.getStatus() + " est votre statut actuel.");
+        IO.println(personne.getNationality() + " est votre nationalité.");
 
         HomeAddress adresse = new HomeAddress(streetName, email, phoneNumber, country, city);
         IO.println(adresse.getCountry() + "est votre pays.");
